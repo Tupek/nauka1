@@ -30,13 +30,22 @@ class HourlyEmployee(Employee):
         self.hours = hours
         return self.salary * hours
 
+class SalariedEmployee(Employee):
+
+    def compute_payment(self):
+        return self.salary * 190
+
 #e = Employee(1, "Kamil", "Nowak")
 #e.set_salary(55)
 #print(e.__salary)
 #print(e.info())
 #print(e.compute_payment(5))
 
-h = HourlyEmployee(1, "Kamil", "Nowak")
-h.set_salary(55)
-print(h.info())
-print(h.compute_payment(5))
+#h = HourlyEmployee(1, "Kamil", "Nowak")
+#h.set_salary(55)
+#print(h.info())
+#print(h.compute_payment(5))
+
+s = SalariedEmployee(1, "Kamil", "Nowak")
+s.set_salary(55)
+print(s.compute_payment())
